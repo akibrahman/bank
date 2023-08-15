@@ -16,8 +16,11 @@ withdrawField.innerText = totalWithdrawAmount;
 
 newDepositSubmit.addEventListener("click", () => {
   if (newDepositInput.value == "0") {
-    alert("Entered Amount Cann't be 0!");
+    alert("Deposit Amount Cann't be 0!");
     newDepositInput.value = "";
+    return;
+  } else if (newDepositInput.value == "") {
+    alert("Enter Deposit Amount!");
     return;
   }
   totalDepositAmount += parseInt(newDepositInput.value);
@@ -29,8 +32,11 @@ newDepositSubmit.addEventListener("click", () => {
 newDepositInput.addEventListener("keyup", (event) => {
   if (event.key == "Enter") {
     if (newDepositInput.value == "0") {
-      alert("Entered Amount Cann't be 0!");
+      alert("Withdraw Amount Cann't be 0!");
       newDepositInput.value = "";
+      return;
+    } else if (newDepositInput.value == "") {
+      alert("Enter Withdraw Amount!");
       return;
     }
     totalDepositAmount += parseInt(newDepositInput.value);
