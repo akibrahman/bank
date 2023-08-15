@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank||Login</title>
+    <!--! Daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--! Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--! FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/8ec1785cc0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main
+      class="bg-main bg-auto bg-no-repeat w-full h-screen flex justify-center items-center"
+    >
+      <div
+        class="bg-transparent border border-border-color backdrop-blur-[20px] w-max py-8 px-12 rounded-xl flex flex-col gap-4"
+      >
+        <h1
+          class="capitalize text-center text-4xl text-slate-100 font-semibold mb-2"
+        >
+          login
+        </h1>
+        <input
+          class="bg-transparent border border-border-color p-2 pl-5 rounded-3xl w-72 placeholder:text-slate-100 text-slate-100 focus:outline-none"
+          type="email"
+          placeholder="Username"
+          name=""
+          id="userName"
+        />
+        <div class="relative">
+          <input
+            class="bg-transparent border border-border-color p-2 pl-5 rounded-3xl w-72 placeholder:text-slate-100 text-slate-100 focus:outline-none"
+            type="password"
+            placeholder="Password"
+            name=""
+            id="userPass"
+          />
+          <i
+            id="eye"
+            class="fa-solid fa-eye-slash text-gray-500 hover:text-gray-600 absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-lg"
+          ></i>
+        </div>
+        <div class="flex justify-between text-slate-100">
+          <div class="flex items-center gap-2">
+            <input
+              type="checkbox"
+              class="checkbox checkbox-xs border-[rgba(255,255,255,0.3)]"
+              id="rem"
+            />
+            <label for="rem" class="cursor-pointer">Remember Me</label>
+          </div>
+          <span class="cursor-pointer">forgot password</span>
+        </div>
+        <button
+          id="submit"
+          class="btn rounded-3xl capitalize text-md min-h-8 h-11"
+        >
+          submit
+        </button>
+        <p class="text-center">
+          Don't have an account?<span class="text-slate-100 ml-1 cursor-pointer"
+            >Register</span
+          >
+        </p>
+      </div>
+    </main>
+  </body>
+  <script src="./main.js"></script>
+</html>

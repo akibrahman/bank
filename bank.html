@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank</title>
+    <!--! Daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--! Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--! Style  -->
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    </style>
+  </head>
+  <body class="lg:h-screen lg:flex flex-col justify-evenly">
+    <section
+      class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 lg:mt-0 px-10"
+    >
+      <div
+        class="bg-slate-500 py-16 px-10 rounded-lg flex flex-col gap-3 justify-center"
+      >
+        <p class="text-2xl">Total Deposit</p>
+        <p class="text-4xl">$<span id="totalDeposit" class=""></span></p>
+      </div>
+      <div
+        class="bg-slate-500 py-16 px-10 rounded-lg flex flex-col gap-3 justify-center"
+      >
+        <p class="text-2xl">Balance</p>
+        <p class="text-4xl">$<span id="balance" class=""></span></p>
+      </div>
+      <div
+        class="bg-slate-500 py-16 px-10 rounded-lg flex flex-col gap-3 justify-center"
+      >
+        <p class="text-2xl">Total Withdraw</p>
+        <p class="text-4xl">$<span id="totalWithdraw" class=""></span></p>
+      </div>
+    </section>
+    <!--! Second  -->
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 gap-14 mt-14 lg:mt-0 px-2 lg:px-14"
+    >
+      <div
+        class="border-2 border-gray-400 py-16 px-10 rounded-lg flex flex-col gap-3 justify-center"
+      >
+        <p class="text-2xl">Deposit Amount</p>
+        <input
+          id="deposit"
+          type="number"
+          placeholder="Enter Amount"
+          class="focus:outline-none input input-bordered w-full max-w-sm"
+        />
+        <button
+          class="btn btn-info w-max text-sm capitalize min-h-0 h-10"
+          id="depositSubmit"
+        >
+          deposit
+        </button>
+      </div>
+      <div
+        class="border-2 border-gray-400 py-16 px-10 rounded-lg flex flex-col gap-3 justify-center"
+      >
+        <p class="text-2xl">Withdraw Amount</p>
+        <input
+          id="withdraw"
+          type="number"
+          placeholder="Enter Amount"
+          class="focus:outline-none input input-bordered w-full max-w-sm"
+        />
+        <button
+          class="btn btn-warning w-max text-sm capitalize min-h-0 h-10"
+          id="withdrawSubmit"
+        >
+          withdraw
+        </button>
+      </div>
+    </section>
+  </body>
+  <script src="./second.js"></script>
+</html>
